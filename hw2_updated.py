@@ -7,11 +7,11 @@ class Employee:
   def __str__(self) -> str:
      return f'Employee: {self.name}'
 
-  def work(self):
+  def work(self) -> str:
    return 'I come to the office'
 
   def dict_my(self) -> dict:
-    dict_my1={self.name: self.salary_per_day}
+    dict_my1 = {self.name: self.salary_per_day}
     return dict_my1
 
 
@@ -23,7 +23,7 @@ class Recruiter(Employee):
    return f'Recruiter: {self.name}'
 
 
-  def work(self):
+  def work(self) -> str :
    return super().work() + f' and start to hiring'
 
 
@@ -31,7 +31,7 @@ class Developer(Employee):
   def __init__(self, name: str, salary_per_day: int):
      return super().__init__(name, salary_per_day)
 
-  def work(self):
+  def work(self) -> str:
    return super().work() + f' and start to coding'
 
   def __str__(self) -> str:
